@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ManagerUnattended xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" product="DocAve 6 Manager">
+  <UserData>
+    <Name Value="" />
+    <Organization Value="" />
+  </UserData>
+  <SetupData>
+    <SetupLocation>
+      <InstallFolder Value="" AllowDefault="False" CustomizedType="False" />
+    </SetupLocation>
+    <ControlConfig>
+      <ControlService Value="false" />
+      <OptionalType Value="00" />
+      <WebSiteName Value="DocAve6" />
+      <WebSitePort Value="" />
+      <AppPoolName Value="DocAve6" />
+      <AppPoolUserName Value="tzPxqsEO1201cwgtDcHJG5pjGoWIAAADadzkEMXmkZs=" EncryptedUsername="true" />
+      <AppPoolPassword Value="kqmQ17h3SGmOJZkIoZViM99dcgtl8Ai10s9pMXk42iI=" EncryptedPassword="true" />
+      <ControlDatabaseServer Value="" />
+      <ControlDatabaseName Value="DocAve6_ControlDB" />
+      <ControlDatabaseIsIntegrated Value="true" />
+      <ControlDatabasePassphrase Value="aqcX+bBOsOi9tM5JZ8/HpFwc3eTsC7kDnFGl1CcCbvY=" EncryptedPassphrase="true" />
+      <ControlFailoverDBServer Value="" />
+      <ControlDatabaseUsername Value="+5A43uHXFYqE3Qqqm/Dk69YGCiy+eEFfYpL46g5zDiQ=" EncryptedUsername="true" />
+      <ControlDatabasePassword Value="OKXDTzkzVF5Fb9/WjjMB53UNl8Gson7Raw+Wu/vQ/24=" EncryptedPassword="true" />
+    </ControlConfig>
+    <MediaConfig>
+      <MediaService Value="false" />
+      <MediaControlAddress Value="" AllowSpecified="False" />
+      <MediaControlPort Value="" />
+      <MediaServicePort Value="" AllowDefault="True" />
+      <MediaDataPort Value="" AllowDefault="True" />
+    </MediaConfig>
+    <ReportConfig>
+      <ReportService Value="true" />
+      <ReportControlAddress Value="daospdemo.cloudapp.net" AllowSpecified="False" />
+      <ReportControlPort Value="443" />
+      <ReportServicePort Value="14003" AllowDefault="True" />
+      <ReportDatabaseServer Value="dbujtli04i.database.windows.net" />
+      <ReportDatabaseName Value="spdemo_report_DB_1227" />
+      <ReportDatabaseIsIntegrated Value="false" />
+      <ReportFailoverDBServer Value="" />
+      <ReportDatabaseUserName Value="daodemo" EncryptedUsername="false" />
+      <ReportDatabasePassword Value="demo12!@" EncryptedPassword="false" />
+      <AuditorDatabaseServer Value="dbujtli04i.database.windows.net" />
+      <AuditorDatabaseName Value="spdemo_auditor_DB_1227" />
+      <AuditorDatabaseIsIntegrated Value="false" />
+      <AuditorFailoverDBServer Value="" />
+      <AuditorDatabaseUserName Value="daodemo" EncryptedUsername="false" />
+      <AuditorDatabasePassword Value="demo12!@" EncryptedPassword="false" />
+    </ReportConfig>
+  </SetupData>
+</ManagerUnattended>

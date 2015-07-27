@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Function Name" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testsuite name="web application level" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Web applicaton level function"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[检查webapp级别pruning数据是否正确]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to web application level; <br/>2. choose a  Web application<br/>3. 填写Pruning设置<br/>4. Run Pruning Job<br/>5. 到Compliance report中查看Audit数据</p>]]></actions><expectedresults><![CDATA[<p>Job可以正常运行，Job Monitor中显示Job finished，Job details信息正确；<br/>Compliance Report中可以看到数据被删除</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Web application Host header"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Web application Host header URL显示和基本功能]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to web application level; <br/>2. choose a Host header Web application<br/>3. 填写其他Pruning设置<br/>4. Run Pruning Job</p>]]></actions><expectedresults><![CDATA[<p>Tree上可以正确Load该Web application；<br/>Tree上URL显示正确；<br/>可以正确剪切此Web application数据</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="http 80"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[检查http 80 Site的端口显示和基本功能]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to web application level; <br/>2. choose a web application which uses port 80<br/>3. 填写其他Pruning设置<br/>4. Run Pruning Job</p>]]></actions><expectedresults><![CDATA[<p>Tree上该节点端口号不显示；<br/>可以正确剪切此Web application数据</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="https 443"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[检查https 443 Site的端口显示和基本功能]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to web application level; <br/>2. choose a web application which uses SSL and port 443<br/>3. 填写其他Pruning设置<br/>4. Run Pruning Job</p>]]></actions><expectedresults><![CDATA[<p>Tree上该节点端口号不显示；<br/>可以正确剪切此Web application数据</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+<testsuite name="site collection level" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Site Collection level function"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[检查site collection级别pruning数据是否正确]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to Site Collection level; <br/>2. choose a  Site Collection<br/>3. 填写Pruning设置<br/>4. Run Pruning Job<br/>5. 到Compliance report中查看Audit数据</p>]]></actions><expectedresults><![CDATA[<p>Job可以正常运行，Job Monitor中显示Job finished，Job details信息正确；<br/>Compliance Report中可以看到数据被删除</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Site Collection Host header"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Web application Host header URL显示和基本功能]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1. load tree to web application level; <br/>2. choose a Host header Web application<br/>3. 填写其他Pruning设置<br/>4. Run Pruning Job</p>]]></actions><expectedresults><![CDATA[<p>Tree上可以正确Load该Web application；<br/>Tree上URL显示正确；<br/>可以正确剪切此Web application数据</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+</testsuite>

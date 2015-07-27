@@ -1,0 +1,30 @@
+<InstallationInformation>
+<CommonValue>
+	<AzureCloudURL value= "daospdemo.cloudapp.net"/>
+	<ManagerFilePath value= "C:\Users\docaveonline\Desktop\DocAve_Online_Manager_20131227"/>
+	<AgentFilePath value= "C:\Users\docaveonline\Desktop\DocAve_Online_Agent_20131227"/>
+</CommonValue>
+<ControlValue>
+	<SQLAzureServer value= "dbujtli04i.database.windows.net"/>
+	<SQLAzureUserName value= "daodemo"/>
+	<SQLAzurePassword value= "demo12!@"/>
+
+	<ControlServerHost value= "spdemocontrol"/>
+	<ControlServerPassword value= "demo12!@"/> 
+	<ControlDBName value= "spdemo_Control_DB_1227"/>
+</ControlValue>
+<MediaValue>
+	<MediaServerHost value= "spdemomedia"/>
+	<MediaServerPassword value= "demo12!@"/>    
+</MediaValue>
+<AgentValue>
+	<AgentServerHost value= "spdemoagent"/>
+	<AgentServerPassword value= "demo12!@"/>  
+</AgentValue>
+<ReportValue>
+	<ReportServerHost value="spdemoreport"/>
+	<ReportServerPassword value="demo12!@"/>
+	<ReportDBName value="spdemo_report_DB_1227"/>
+	<AuditorDBName value="spdemo_auditor_DB_1227"/>
+</ReportValue>
+</InstallationInformation>

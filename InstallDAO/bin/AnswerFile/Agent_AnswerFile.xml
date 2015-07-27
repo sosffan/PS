@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Unattended xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" product="DocAve 6">
+  <UserData>
+    <Name Value="" />
+    <Organization Value="" />
+  </UserData>
+  <SetupData>
+    <SetupLocation>
+      <InstallFolder Value="" AllowDefault="false" CustomizedType="false" />
+    </SetupLocation>
+    <CommunicationConfig>
+      <ControlAddress Value="daospdemo.cloudapp.net" />
+      <ControlPort Value="443" />
+      <AgentPort Value="14004" AllowDefault="true" />
+    </CommunicationConfig>
+    <SSLCertification>
+      <Certification Value="A2 B3 F4 55 1F E3 23 9D AB AC" Type="Buildin" />
+    </SSLCertification>
+    <AgentConfiguration>
+      <AgentAuthentication>
+        <ManagerPassphrase Value="demo12!@" EncryptedPassphrase="false" />
+      </AgentAuthentication>
+      <AgentAccount>
+        <Username Value=".\docaveonline" EncryptedUsername="false" />
+        <Password Value="demo12!@" EncryptedPassword="false" />
+      </AgentAccount>
+    </AgentConfiguration>
+  </SetupData>
+</Unattended>

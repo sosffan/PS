@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="scom monitor" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testsuite name="Monitor DocAve Agent" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Alert for Agent service Down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Alert for Agent service Down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Agent Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Agent Service Down的时候，可以收到Alert，且Alert resolution status is New。<br/>2.Alert中的Source属性为Down掉的Agent所在机器。<br/>3.Alert Monitor为DA Agent Service。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Auto restart Agent service"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Auto restart Agent service]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Agent Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View<br/>4.一段时间后，检查Agent service状态（About 5 Mins）</p>]]></actions><expectedresults><![CDATA[<p>1.Agent Service自动启动<br/>2.当Down掉的Agent重新启动后，Alert resolution status is Closed。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Agent service down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Agent service down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Agent Service<br/>2.检查Email Notification</p>]]></actions><expectedresults><![CDATA[<p>1.可以收到提示邮件<br/>2.邮件中Alert为DocAve Agent Service, 3.Source为此Agent所在机器</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Agent server Memory usage"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Agent server Memory usage]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Agent所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Agent所在机器的内存占用减低到1G以下，持续超过5分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.Agent所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Agent所在的机器<br/>3.Alert Monitor为DA Agent Memory。<br/>4.当Agent机器的内存下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Agent server Memory overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Agent server Memory overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Agent所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查邮件提示<br/>3.使Agent所在机器的内存占用减低到1G以下，持续超过5分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Agent所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到邮件提示，Alert属性为DA Agent Memory，Source属性为该Agent所在机器。<br/>2.Agent所在机器内存下降到1G以下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Agent server CPU rate"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Agent server CPU rate]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Agent所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Agent所在机器的CPU占用减低到70%以下，持续超过10分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Agent所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Agent所在的机器<br/>3.Alert Monitor为DA Agent CPU。<br/>4.当Agent机器的CPU下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Agent server CPU overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Agent server CPU overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Agent所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查邮件提示<br/>3.使Agent所在机器的CPU占用降到70%以下，持续超过10分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Agent所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到邮件提示，Alert属性为DA Agent CPU，Source属性为该Agent所在机器。<br/>2.Agent所在机器CPU占用达到70%以下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+<testsuite name="Monitor DocAve Media" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Alert for Media service Down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Alert for Media service Down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Media Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Media Service Down的时候，可以收到Alert，且Alert resolution status is New。<br/>2.Alert中的Source属性为Down掉的Media所在机器。<br/>3.Alert Monitor为DA Media Service。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Auto restart Media service"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Auto restart Media service]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Media Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View<br/>4.一段时间后，检查Media service状态（About 5 Mins）</p>]]></actions><expectedresults><![CDATA[<p>1.Media Service自动启动<br/>2.当Down掉的Media重新启动后，Alert resolution status is Closed。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Media service down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Media service down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Media Service<br/>2.检查Email Notification</p>]]></actions><expectedresults><![CDATA[<p>1.可以收到提示邮件<br/>2.邮件中Alert为DocAve Media Service, 3.Source为此Media所在机器</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Media server Memory usage"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Media server Memory usage]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Media所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Media所在机器的内存占用减低到1G以下，持续超过5分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Media所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Media所在的机器<br/>3.Alert Monitor为DA Media Memory。<br/>4.当Media机器的内存下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Media server Memory overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Media server Memory overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Media所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查邮件提示<br/>3.使Media所在机器的内存占用减低到1G以下，持续超过5分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Media所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到邮件提示，Alert属性为DA Media Memory，Source属性为该Media所在机器。<br/>2.Media所在机器内存下降到1G以下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Media server CPU rate"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Media server CPU rate]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Media所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Media所在机器的CPU占用减低到70%以下，持续超过10分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Media所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Media所在的机器<br/>3.Alert Monitor为DA Media CPU。<br/>4.当Media机器的CPU下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Media server CPU overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Media server CPU overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Media所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查邮件提示<br/>3.使Media所在机器的CPU占用降到70%以下，持续超过10分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Media所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到邮件提示，Alert属性为DAMedia CPU，Source属性为该Media所在机器。<br/>2.Media所在机器CPU占用达到70%以下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+<testsuite name="Monitor DocAve Control" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Alert for Control service Down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Alert for Control service Down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Control Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Control Service Down的时候，可以收到Alert，且Alert resolution status is New。<br/>2.Alert中的Source属性为Down掉的Control所在机器。<br/>3.Alert Monitor为DA Control Service。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Auto restart Control service"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Auto restart Control service]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Control Service<br/>2.检查 alert message in DocAve Alert View<br/>3.检查alert message in DocAve Dashboard View<br/>4.一段时间后，检查Control service状态（About 5 Mins）</p>]]></actions><expectedresults><![CDATA[<p>1.Control Service自动启动<br/>2.当Down掉的Control重新启动后，Alert resolution status is Closed。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Control service down"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Control service down]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.Stop DocAve Control Service<br/>2.检查Email Notification</p>]]></actions><expectedresults><![CDATA[<p>1.可以收到提示邮件<br/>2.邮件中Alert为DocAve Control Service, 3.Source为此Control所在机器</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Control server Memory usage"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Control server Memory usage]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Control所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Control所在机器的内存占用减低到1G以下，持续超过5分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Control所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Control所在的机器<br/>3.Alert Monitor为DA Control Memory。<br/>4.当Control机器的内存下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Control server Memory overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Control server Memory overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Control所在机器的内存占用达到1.5G以上，持续超过5分钟<br/>2.检查邮件提示<br/>3.使Control所在机器的内存占用减低到1G以下，持续超过5分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Control所在机器的内存占用达到1.5G以上，并持续5分钟后，可以收到邮件提示，Alert属性为DA Control Memory，Source属性为该Control所在机器。<br/>2.Control所在机器内存下降到1G一下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Control server CPU rate"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Control server CPU rate]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Control所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查Alert Message in DocAve Alert View<br/>3.检查Alert Messsage in DocAve Dashboard View<br/>4.使Control所在机器的CPU占用减低到70%以下，持续超过10分钟<br/>5.检查Alert Message in DocAve Alert View<br/>6.检查Alert Messsage in DocAve Dashboard View</p>]]></actions><expectedresults><![CDATA[<p>1.当Control所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到Alert message，Resolution Status为New。<br/>2.Alert Source属性为该Agent所在的机器<br/>3.Alert Monitor为DA Control CPU。<br/>4.当Control机器的CPU下降一段时间后，Alert的Resolution Status为Close。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Control server CPU overload"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Control server CPU overload]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.使Control所在机器的CPU占用达到80%以上，持续超过10分钟<br/>2.检查邮件提示<br/>3.使Control所在机器的CPU占用降到70%以下，持续超过10分钟<br/>4.检查邮件提示</p>]]></actions><expectedresults><![CDATA[<p>1.Control所在机器的CPU占用达到80%以上，并持续10分钟后，可以收到邮件提示，Alert属性为DA Control CPU，Source属性为该Control所在机器。<br/>2.Control所在机器CPU占用达到70%以下，并持续5分钟后，可以收到邮件提示。</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[Medium]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+<testsuite name="Monitor Azure VM" ><node_order><![CDATA[1]]></node_order><details><![CDATA[]]></details>
+<testcase internalid="" name="Alert for Connection failed"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Alert for Connection failed]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.关闭Azure VM<br/>2.检查Alert message</p>]]></actions><expectedresults><![CDATA[<p>1.Alert提示无法连接到相关Server。<br/>2.Source为该Server 名</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+<testcase internalid="" name="Email subscription for Connection failed"><node_order><![CDATA[]]></node_order><externalid><![CDATA[]]></externalid><version><![CDATA[1]]></version>
+                <summary><![CDATA[Email subscription for Connection failed]]></summary>
+                <preconditions><![CDATA[]]></preconditions><execution_type><![CDATA[1]]></execution_type><importance><![CDATA[3]]></importance>
+                <steps><step><step_number><![CDATA[1]]></step_number><actions><![CDATA[<p>1.关闭Azure VM<br/>2.检查邮件</p>]]></actions><expectedresults><![CDATA[<p>可以收到邮件，Source为该Server 名</p>]]></expectedresults><execution_type><![CDATA[ 1]]></execution_type></step></steps>
+                <custom_fields><custom_field><name><![CDATA[Priority]]></name><value><![CDATA[High]]></value></custom_field></custom_fields>
+                </testcase>
+</testsuite>
+</testsuite>

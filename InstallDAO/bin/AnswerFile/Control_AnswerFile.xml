@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ManagerUnattended xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" product="DocAve 6 Manager">
+  <UserData>
+    <Name Value="" />
+    <Organization Value="" />
+  </UserData>
+  <SetupData>
+    <SetupLocation>
+      <InstallFolder Value="" AllowDefault="False" CustomizedType="False" />
+    </SetupLocation>
+    <ControlConfig>
+      <ControlService Value="true" />
+      <OptionalType Value="00" />
+      <WebSiteName Value="DocAve6" />
+      <WebSitePort Value="443" />
+      <AppPoolName Value="DocAve6" />
+      <AppPoolUserName Value=".\docaveonline" EncryptedUsername="false" />
+      <AppPoolPassword Value="demo12!@" EncryptedPassword="false" />
+      <ControlDatabaseServer Value="dbujtli04i.database.windows.net" />
+      <ControlDatabaseName Value="spdemo_Control_DB_1227" />
+      <ControlDatabaseIsIntegrated Value="false" />
+      <ControlDatabasePassphrase Value="demo12!@" EncryptedPassphrase="false" />
+      <ControlFailoverDBServer Value="" />
+      <ControlDatabaseUsername Value="daodemo" EncryptedUsername="false" />
+      <ControlDatabasePassword Value="demo12!@" EncryptedPassword="false" />
+    </ControlConfig>
+    <MediaConfig>
+      <MediaService Value="false" />
+      <MediaControlAddress Value="" AllowSpecified="False" />
+      <MediaControlPort Value="" />
+      <MediaServicePort Value="" AllowDefault="True" />
+      <MediaDataPort Value="" AllowDefault="True" />
+    </MediaConfig>
+    <ReportConfig>
+      <ReportService Value="false" />
+      <ReportControlAddress Value="" AllowSpecified="False" />
+      <ReportControlPort Value="" />
+      <ReportServicePort Value="14003" AllowDefault="True" />
+      <ReportDatabaseServer Value="" />
+      <ReportDatabaseName Value="DocAve6_ReportDB" />
+      <ReportDatabaseIsIntegrated Value="true" />
+      <ReportFailoverDBServer Value="" />
+      <ReportDatabaseUserName Value="rLU8/RTumCM3luAB5t9ZB1h16turAEJXZGXLSExUq/M=" EncryptedUsername="true" />
+      <ReportDatabasePassword Value="yHkoi2ArBbrZTusqQt18oZFWkUdqpKi6bKv6gNnsweY=" EncryptedPassword="true" />
+      <AuditorDatabaseServer Value="" />
+      <AuditorDatabaseName Value="DocAve6_AuditorDB" />
+      <AuditorDatabaseIsIntegrated Value="true" />
+      <AuditorFailoverDBServer Value="" />
+      <AuditorDatabaseUserName Value="kh8xIyXWlSseEuMEdhkgOWVqdatwa9ZaFKuOfSXcCjU=" EncryptedUsername="true" />
+      <AuditorDatabasePassword Value="wESeadIqmYV2L9TP5c15CUsCwu9pM3l1I5no5mELQKM=" EncryptedPassword="true" />
+    </ReportConfig>
+  </SetupData>
+</ManagerUnattended>

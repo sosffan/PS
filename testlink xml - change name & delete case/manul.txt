@@ -1,0 +1,49 @@
+Test Link导出的XML中，Summary处存在一些标记信息，如果想利用这些Summary信息，需要删除无用的标记。
+使用 del zerg.ps1
+
+
+
+
+
+
+
+
+
+
+
+Case title写的太差 （SC level 01,SC level 02,....）
+Summary 将测试内容写了出来，所以修改Title为 —— Title + Summary
+edit name by summary.ps1
+
+
+
+
+
+
+
+
+
+XML 格式的Case很难选择，只选择name和id导出到 txt文件中
+
+使用 select name id.ps1
+
+
+
+
+========================================================
+
+012 test a.ps1 整合了上述内容。
+
+
+
+
+
+
+
+
+
+很多Case需要被删除，下载XML，记住需要删除的Case InternalID 到一个文档中，
+需要格式为:
+	internalid : 4444 (如 4 del.txt一样的格式)
+
+使用 del node.ps1 来删除这些Case
